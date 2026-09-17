@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MunchMate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MunchMate Message -->
+<div id="messageBox" style="display: none;">
+    <div id="messageIcon">⚠️</div>
+    <p id="messageText"></p>
+    <button onclick="closeMessage()">Got it</button>
+</div>
+
+<!-- MunchMate Confirmation -->
+<div id="confirmBox" style="display: none;">
+    <div id="confirmIcon">⚠️</div>
+
+    <p id="confirmText"></p>
+
+    <button onclick="closeConfirm()">Cancel</button>
+    <button onclick="confirmRemove()">Remove</button>
+</div>
+
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen">
+        <h1>Welcome to MunchMate!</h1>
+        <p>Your food, your choice.</p>
+
+        <button onclick="startOrdering()">Start Ordering</button>
+    </div>
+
+
+    <!-- Name Screen -->
+    <div id="nameScreen" style="display: none;">
+        <h1>Welcome!</h1>
+        <p>What's your name?</p>
+
+        <input type="text" id="customerName" placeholder="Enter your name">
+
+        <br><br>
+
+        <button onclick="continueToMenu()">Continue</button>
+    </div>
+
+
+    <!-- Category Screen -->
+    <div id="menuScreen" style="display: none;">
+        <h1>What would you like to eat?</h1>
+        <p>Choose a category below.</p>
+
+        <button onclick="chooseCategory('Meals')">🍽️ Meals</button>
+        <button onclick="chooseCategory('Snacks')">🍿 Snacks</button>
+        <button onclick="chooseCategory('Beverages')">🥤 Beverages</button>
+
+        <br>
+
+        <button onclick="backToCart()">← Back to Cart</button>
+    </div>
+
+
+    <!-- Meals Screen -->
+    <div id="mealsScreen" style="display: none;">
+        <h1>🍽️ Meals</h1>
+        <p>Choose your meal.</p>
+
+        <button onclick="chooseFood('Fish Fillet')">Fish Fillet - ₱128</button>
+        <button onclick="chooseFood('Sisig')">Sisig - ₱135</button>
+        <button onclick="chooseFood('Beef Steak')">Beef Steak - ₱120</button>
+        <button onclick="chooseFood('Adobo')">Adobo - ₱85</button>
+        <button onclick="chooseFood('Liempo')">Liempo - ₱135</button>
+
+        <br>
+
+        <button onclick="showMenu()">← Back to Categories</button>
+
+    </div>
+
+
+    <!-- Snacks Screen -->
+    <div id="snacksScreen" style="display: none;">
+        <h1>🍿 Snacks</h1>
+        <p>Choose your snack.</p>
+
+        <button onclick="chooseFood('Churros')">Churros - ₱100</button>
+        <button onclick="chooseFood('French Fries')">French Fries - ₱45</button>
+        <button onclick="chooseFood('Spaghetti')">Spaghetti - ₱75</button>
+        <button onclick="chooseFood('Beef Burger')">Beef Burger - ₱32</button>
+        <button onclick="chooseFood('Mango Float')">Mango Float - ₱120</button>
+
+        <br>
+
+        <button onclick="showMenu()">← Back to Categories</button>
+
+    </div>
+
+
+    <!-- Beverages Screen -->
+    <div id="beveragesScreen" style="display: none;">
+        <h1>🥤 Beverages</h1>
+        <p>Choose your beverage.</p>
+
+        <button onclick="chooseFood('Mango Shake')">Mango Shake - ₱75</button>
+        <button onclick="chooseFood('Buko Pandan')">Buko Pandan - ₱50</button>
+        <button onclick="chooseFood('Iced Tea')">Iced Tea - ₱33</button>
+        <button onclick="chooseFood('Coke')">Coke - ₱20</button>
+        <button onclick="chooseFood('Sprite')">Sprite - ₱20</button>
+
+        <br>
+
+        <button onclick="showMenu()">← Back to Categories</button>
+
+    </div>
+
+    <!-- Quantity Screen -->
+<div id="quantityScreen" style="display: none;">
+
+    <h1>🍽️ How many?</h1>
+
+    <p id="selectedFood"></p>
+
+    <input
+        type="number"
+        id="quantityInput"
+        min="1"
+        placeholder="Enter quantity"
+    >
+
+    <br><br>
+
+    <button onclick="confirmQuantity()">Add to Order</button>
+
+    <br>
+
+        <button onclick="showMenu()">← Back to Categories</button>
+
+</div>
+    
+         <!-- Cart Screen -->
+<div id="cartScreen" style="display: none;">
+
+    <h1>🛒 Your Order</h1>
+    <p id="cartCustomer"></p>
+
+    <div id="cartItems"></div>
+
+    <h2>Total: ₱<span id="cartTotal">0</span></h2>
+
+    <button onclick="showMenu()">➕ Add More Items</button>
+    <button onclick="showPayment()">💳 Proceed to Payment</button>
+
+</div>
+
+<!-- Payment Screen -->
+<div id="paymentScreen" style="display: none;">
+
+    <h1>💳 Payment</h1>
+
+    <p id="paymentTotal"></p>
+
+    <input
+        type="number"
+        id="paymentInput"
+        min="0"
+        placeholder="Enter payment amount"
+    >
+
+    <br><br>
+
+    <button onclick="confirmPayment()">Pay</button>
+
+</div>
+
+<!-- Receipt Screen -->
+<div id="receiptScreen" style="display: none;">
+
+    <h1>🧾 MunchMate Receipt</h1>
+    <p class="receiptTagline">Your food, Your choice.</p>
+
+    <p id="receiptCustomer"></p>
+
+    <div id="receiptItems"></div>
+
+    <h2>Total: ₱<span id="receiptTotal">0</span></h2>
+
+    <p id="receiptPayment"></p>
+
+    <p id="receiptChange"></p>
+
+    <p id="receiptReference"></p>
+
+    <button onclick="startNewOrder()">🛍️ New Order</button>
+
+</div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

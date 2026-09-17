@@ -1,0 +1,487 @@
+/* ==============================
+   MunchMate - General Page
+   ============================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff4e6;
+    color: #333;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   Screens
+   ============================== */
+
+#welcomeScreen,
+#nameScreen,
+#menuScreen,
+#mealsScreen,
+#snacksScreen,
+#beveragesScreen,
+#quantityScreen,
+#cartScreen,
+#paymentScreen,
+#receiptScreen {
+    background-color: white;
+
+    width: 90%;
+    max-width: 700px;
+
+    padding: 50px 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   Headings
+   ============================== */
+
+h1 {
+    font-size: 42px;
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   Paragraphs
+   ============================== */
+
+p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   Text Input
+   ============================== */
+
+input {
+    width: 80%;
+    max-width: 400px;
+
+    padding: 15px;
+
+    font-size: 18px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+
+input:focus {
+    border-color: #d35400;
+}
+
+
+/* ==============================
+   Buttons
+   ============================== */
+
+button {
+    background-color: #d35400;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    margin: 8px;
+
+    font-size: 17px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* ==============================
+   Button Hover
+   ============================== */
+
+button:hover {
+    background-color: #e67e22;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   Button Click
+   ============================== */
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   Cart Items
+   ============================== */
+
+.cartItem {
+    background-color: #fff4e6;
+
+    padding: 20px;
+
+    margin: 15px 0;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Receipt Items
+   ============================== */
+
+#receiptItems p {
+    background-color: #fff4e6;
+
+    padding: 15px 20px;
+
+    margin: 10px 0;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Cart Total
+   ============================== */
+
+#cartScreen h2 {
+    font-size: 28px;
+    color: #d35400;
+    margin-top: 25px;
+}
+
+/* ==============================
+   Receipt Total
+   ============================== */
+
+#receiptScreen h2 {
+    font-size: 30px;
+    color: #d35400;
+
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    border-top: 2px dashed #ddd;
+    border-bottom: 2px dashed #ddd;
+}
+
+/* ==============================
+   Receipt Details
+   ============================== */
+
+#receiptPayment,
+#receiptChange,
+#receiptReference {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ==============================
+   Receipt Payment & Change
+   ============================== */
+
+#receiptPayment {
+    border: 1px solid #ddd;
+}
+
+#receiptChange {
+    border: 2px solid #d35400;
+    font-size: 20px;
+}
+
+/* ==============================
+   Receipt Reference
+   ============================== */
+
+#receiptReference {
+    font-size: 16px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/* ==============================
+   Receipt Divider
+   ============================== */
+
+#receiptItems {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   Remove Button
+   ============================== */
+
+#cartItems button {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 4px;
+}
+
+/* ==============================
+   Remove Button Hover
+   ============================== */
+
+#cartItems button:hover {
+    transform: none;
+}
+
+/* ==============================
+   Food Menu Buttons
+   ============================== */
+
+#mealsScreen button,
+#snacksScreen button,
+#beveragesScreen button {
+    display: block;
+    width: 80%;
+    max-width: 350px;
+    margin: 10px auto;
+}
+
+/* ==============================
+   Receipt Tagline
+   ============================== */
+
+.receiptTagline {
+    font-size: 16px;
+    color: #999;
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   Receipt Customer
+   ============================== */
+
+#receiptCustomer {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff4e6;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   New Order Button
+   ============================== */
+
+#receiptScreen button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+/* ==============================
+   Mobile / Small Screens
+   ============================== */
+
+@media (max-width: 600px) {
+
+#welcomeScreen,
+#nameScreen,
+#menuScreen,
+#mealsScreen,
+#snacksScreen,
+#beveragesScreen,
+#quantityScreen,
+#cartScreen,
+#paymentScreen,
+#receiptScreen {
+    width: 92%;
+    padding: 45px 20px;
+}
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+/* ==============================
+   MunchMate Message Box
+   ============================== */
+
+#messageBox {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 85%;
+    max-width: 400px;
+
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+
+#messageIcon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+#messageText {
+    font-size: 19px;
+    color: #444;
+
+    margin: 15px 0 25px;
+}
+
+
+#messageBox button {
+    padding: 12px 30px;
+
+    font-size: 17px;
+
+    margin: 0;
+}
+
+/* ==============================
+   MunchMate Confirmation Box
+   ============================== */
+
+#confirmBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 85%;
+    max-width: 400px;
+
+    background-color: white;
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    z-index: 1001;
+
+    box-sizing: border-box;
+}
+
+/* Confirmation Icon */
+
+#confirmIcon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+/* Confirmation Text */
+
+#confirmText {
+    font-size: 19px;
+    color: #444;
+
+    margin: 15px 0 25px;
+}
+
+/* Confirmation Buttons */
+
+#confirmBox button {
+    padding: 12px 25px;
+    font-size: 17px;
+    margin: 5px;
+}
+
+/* Cancel Button */
+
+#confirmBox button:first-of-type {
+    background-color: #777;
+}
+
+/* Remove Button */
+
+#confirmBox button:last-of-type {
+    background-color: #c0392b;
+}
+
+/* Button Hover */
+
+#confirmBox button:first-of-type:hover {
+    background-color: #666;
+}
+
+#confirmBox button:last-of-type:hover {
+    background-color: #e74c3c;
+}
+
